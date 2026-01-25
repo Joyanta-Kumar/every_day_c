@@ -27,15 +27,18 @@ int main(int argc, char** argv) {
 	int count = 1;
 
 	for (int i = 1; i < argc; i++) {
-		if (btm == 0 && (strcmp("--btm", argv[i]) == 0) || strcmp("-b", argv[i]) == 0) {
+		if (btm == 0 && (strcmp("--btm", argv[i]) == 0 || strcmp("-b", argv[i]) == 0)) {
 			btm = parseInt(argv[ i + 1 ]);
 		}
-		else if (top == RAND_MAX && (strcmp("--top", argv[i]) == 0) || strcmp("-t", argv[i]) == 0) {
+		else if (top == RAND_MAX && (strcmp("--top", argv[i]) == 0 || strcmp("-t", argv[i]) == 0)) {
 			top = parseInt(argv[ i + 1 ]);
+		}
+		else if (count == 1 && (strcmp("--count", argv[i]) == 0 || strcmp("-c", argv[i]) == 0)) {
+			count = parseInt(argv[ i + 1 ]);
 		}
 	}
 
-	printf("btm: %d\t top: %d", btm, top);
+	printf("btm: %d\ttop: %d\tcount: %d", btm, top, count);
 
 	return 0;
 }

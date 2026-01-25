@@ -7,8 +7,12 @@ For now, it only deals with integers. Float will come gradually.
 First, compile it and then,  
 
 ```sh
-./randint [start] [end]
+./randint -b [bottom] -t [top]
 ```
+or  
+```sh
+./randint --btm [bottom] --top [top]
+``` 
 
 ## Next plan  
 - add a third parameter `count` to get multiple random number. (Now I thing it is useless)
