@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 	int count = 1;
 
 	for (int i = 1; i < argc; i++) {
-		if (btm == 0 && (strcmp("--btm", argv[i]) == 0 || strcmp("-b", argv[i]) == 0)) {
+		if (btm == 0 && (strcmp("--bottom", argv[i]) == 0 || strcmp("-b", argv[i]) == 0)) {
 			btm = parseInt(argv[ i + 1 ]);
 		}
 		else if (top == RAND_MAX && (strcmp("--top", argv[i]) == 0 || strcmp("-t", argv[i]) == 0)) {
@@ -38,7 +38,11 @@ int main(int argc, char** argv) {
 		}
 	}
 
-	printf("btm: %d\ttop: %d\tcount: %d", btm, top, count);
+	printf("btm: %d\ttop: %d\tcount: %d\n", btm, top, count);
 
+	for (int i = 0; i < count; i++) {
+		int randomNumber = getRandomInt(btm, top);
+		printf("%d ", randomNumber);
+	}
 	return 0;
 }

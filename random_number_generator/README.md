@@ -11,7 +11,7 @@ First, compile it and then,
 ```
 or  
 ```sh
-./randint --btm [bottom] --top [top]
+./randint --bottom [bottom] --top [top]
 ``` 
 
 ## Next plan  
@@ -20,4 +20,4 @@ or
 - parameters should not be mendatory.
 - if no start and end: start = 0 and end = MAX_INT  
 
-
+hopefully I have done all that.
