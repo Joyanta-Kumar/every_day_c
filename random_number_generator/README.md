@@ -3,6 +3,9 @@
 For now, it only deals with integers. Float will come gradually.
 
 ## How to run it
+
+First, compile it and then,  
+
 ```sh
 ./randint [start] [end]
 ```
