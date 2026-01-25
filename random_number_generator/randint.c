@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 
 int parseInt(char* str) {
@@ -12,19 +13,29 @@ int parseInt(char* str) {
     return number;
 }
 
-int getRandomInt(int bottom, int top) {	
-	int randomNumber = rand() % (top + 1 - bottom);
+
+int getRandomInt(int btm, int top) {	
+	int randomNumber = rand() % (top + 1 - btm);
 	return randomNumber;
 }
 
+
 int main(int argc, char** argv) {
-
 	srand(time(NULL));
-	int bottom = parseInt(argv[1]);
-	int top = parseInt(argv[2]);
+	int btm = 0;
+	int top = RAND_MAX;
+	int count = 1;
 
-	int randomNumber = getRandomInt(bottom, top);
-	printf("%d", randomNumber);
+	for (int i = 1; i < argc; i++) {
+		if (btm == 0 && (strcmp("--btm", argv[i]) == 0) || strcmp("-b", argv[i]) == 0) {
+			btm = parseInt(argv[ i + 1 ]);
+		}
+		else if (top == RAND_MAX && (strcmp("--top", argv[i]) == 0) || strcmp("-t", argv[i]) == 0) {
+			top = parseInt(argv[ i + 1 ]);
+		}
+	}
+
+	printf("btm: %d\t top: %d", btm, top);
 
 	return 0;
 }
