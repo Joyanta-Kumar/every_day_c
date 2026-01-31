@@ -4,3 +4,6 @@
 problem: youtube থেইকা yt-dlp দিয়া video download করলে ঐগুলার নামের মধ্যে space থাকে। এইটা ভাল্লাগে না। কিন্তু manually rename করতে মন চায় না।  
 
 app: যেই নাম আছে ঐটা থেইকা space রে '-' বা '_' দিয়া rename  কইরা দিবো।
+
+
+Matro mathay ashlo. I can try to tweak the yt-dlp source code and compile. The sounds complicated to me for now. Let's see how long it takes before it doesn't anymore.
