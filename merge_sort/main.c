@@ -25,7 +25,7 @@ int maxValue)
 
 void printArray(int* array, int length)
 {
-  printf("Address: %p\nLength: %d\n", array, length);
+  printf("Address: %p\nLength: %d\nArray: ", array, length);
   for (int i = 0; i < length; i++) {
     printf("%d ", array[i]);
   }
