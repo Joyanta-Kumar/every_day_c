@@ -7,7 +7,7 @@ typedef struct list {
   int length;
 } List;
 
-List* createRandomArray(
+List* createRandomArrayList(
 int minLength,
 int maxLength,
 int minValue,
@@ -23,24 +23,24 @@ int maxValue)
 }
 
 
-void printArray(int* array, int length)
+void printArrayList(int* array, int length)
 {
-  printf("Address: %p\nLength: %d\nArray: ", array, length);
+  printf(" ---\n| Address:\t%p\n| Length:\t%d\n| Array:\t", array, length);
   for (int i = 0; i < length; i++) {
     printf("%d ", array[i]);
   }
-  printf("\n");
+  printf("\n ---\n");
 }
 
 
 int main() {
   srand(time(NULL));
 
-  List *list = createRandomArray(2, 15, 0, 100);
-  int length = list->length;
-  int *array = list->array;
+  List *list_1 = createRandomArrayList(2, 10, 0, 10);
+  List *list_2 = createRandomArrayList(2, 10, 0, 10);
 
-  printArray(array, length);
+  printArrayList(list_1->array, list_1->length);
+  printArrayList(list_2->array, list_2->length);
 
   return 0;
 }
